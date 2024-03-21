@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS transits</title>
+  <link rel="stylesheet" href="assets/normalize.css">
+  <title>Assignment 3</title>
+  <style>
+      body{
+          overflow: hidden;
+      }
+
+    section>div{
+      width: 300px;
+      height: 150px;
+      border-radius: 15px;
+        animation-duration: 3s;
+        animation-name: my-animation;
+        background-color: green;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-direction: alternate;
+    }
+    @keyframes my-animation {
+        0%{
+            /*background-color: green;*/
+
+            margin-left: 0;
+            margin-top: 0;
+        }
+        25%{
+            background-color: orange;
+            margin-left: calc(100vw - 300px) ;
+            margin-top: 0;
+            transform: rotate(180deg);
+        }
+        50%{
+            background-color: red;
+            margin-top: calc(100vh - 150px);
+            margin-left: calc(100vw - 300px) ;
+            margin-right: 0;
+            transform: rotate(0deg);
+        }
+        75%{
+            background-color: lightgreen;
+            margin-top: calc(100vh - 150px);
+            margin-left: 0;
+            transform: rotate(-180deg);
+        }
+        /*100%{
+            margin-top:0;
+            margin-left: 0;
+        }*/
+    }
+  </style>
+</head>
+<body>
+<section>
+  <div></div>
+</section>
+</body>
+</html>
